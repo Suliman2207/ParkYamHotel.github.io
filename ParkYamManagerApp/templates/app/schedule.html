@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+<!--<table>-->
+    <!--<tr>-->
+        <!--<th>Name</th>-->
+        <!--<th>Comment</th>-->
+    <!--</tr>-->
+
+    <!--{% for name, name_item in coms %}-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--{{ name}}-->
+            <!--<td/>-->
+            <!--<td>-->
+                <!--{% for comm, comm in name_item %}-->
+                <!--{{comm}}-->
+                <!--{% endfor %}-->
+            <!--</td>-->
+        <!--</tr>-->
+    <!--{% endfor %}-->
+<!--</table>-->
+
+
+<table>
+    <tr>
+        <th>Shift</th>
+        <th>Sunday</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+    </tr>
+
+    {% for shift, shift_item in results.items %}
+        <tr>
+            {% for day, day_item in shift_item.items %}
+                <td>
+                    {% for name in day_item %}
+                        {{ name }} <br>
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "app/base_generic.html" %}
+{% block content %}
+
+<!--<table>-->
+    <!--<tr>-->
+        <!--<th>Name</th>-->
+        <!--<th>Comment</th>-->
+    <!--</tr>-->
+
+    <!--{% for name, name_item in coms %}-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--{{ name}}-->
+            <!--<td/>-->
+            <!--<td>-->
+                <!--{% for comm, comm in name_item %}-->
+                <!--{{comm}}-->
+                <!--{% endfor %}-->
+            <!--</td>-->
+        <!--</tr>-->
+    <!--{% endfor %}-->
+<!--</table>-->
+
+<h1>Weekly Shifts Schedule</h1>
+<p><br><br><br></p>
+<table>
+<tr align="center"> <td/> <td width="70"><b> Sunday </b></td> <td width="70"><b> Monday </b></td> <td width="70"><b> Tuesday </b></td> <td width="70"><b> Wednesday </b></td> <td width="70"><b> Thursday </b></td> <td width="70"><b> Friday </b></td> <td width="70"><b> Saturday </b></td> </tr>
+<tr align="center"> <td><b>Morning</b></td>   <td> {{sol.0}} </td> <td> {{sol.3}} </td> <td> {{sol.6}} </td> <td> {{sol.9}}  </td> <td> {{sol.12}} </td> <td> {{sol.15}} </td> <td> {{sol.18}} </td></tr>
+<tr align="center"> <td><b>Afternoon</b></td> <td> {{sol.1}} </td> <td> {{sol.4}} </td> <td> {{sol.7}} </td> <td> {{sol.10}} </td> <td> {{sol.13}} </td> <td> {{sol.16}} </td> <td> {{sol.19}} </td></tr>
+<tr align="center"> <td><b>Night</b></td>     <td> {{sol.2}} </td> <td> {{sol.5}} </td> <td> {{sol.8}} </td> <td> {{sol.11}} </td> <td> {{sol.14}} </td> <td> {{sol.17}} </td> <td> {{sol.20}} </td></tr>
+</table>
+
+
+
+{% endblock %}
